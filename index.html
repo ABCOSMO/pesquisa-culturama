@@ -11,49 +11,53 @@
     </header>
     <section>
         <form action="" method="get">
-            <!--
+            
             <fieldset>
             
                       
-             <legend>Dados Pessoais</legend>
-            <label for="userName">Nome</label>
-            <input type="text" name="userName" required>
-            <br>
-            <label for="userAge">Idade</label>
-            <input type="number" name="userAge" min="12" max="100" required>
-            <br>
-            <label for="birthDate">Data de Nascimento</label>
-            <input type="date" name="birthDate">
-            <br>
-            <label for="userEmail">Email</label>
-            <input type="email" name="userEmail" required>
-            <br>
-            <label for="userPhoneNumber">Telefone</label>
-            <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11111111111">
-            <br>
-            <label for="userImage">Upload de foto</label>
-            <input type="file" name="userImage" accept="image/*">
-            <br><br>
+                <legend>Dados Pessoais</legend>
+                <label for="name">Nome</label>
+                <input id="name" type="text" name="userName" required>
+                <br>
+
+                <label for="age">Idade</label>
+                <input id="age" type="number" name="userAge" min="12" max="100" required>
+                <br>
+
+                <label for="birthDate">Data de Nascimento</label>
+                <input id="birthDate" type="date" name="userBirthDate">
+                <br>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="userEmail" required>
+                <br>
+
+                <label for="phoneNumber">Telefone</label>
+                <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11111111111">
+                <br>
+
+                <label for="image">Upload de foto</label>
+                <input id="image" type="file" name="userImage" accept="image/*">
+                <br><br>
             </fieldset>
-            -->
+            
 
             <fieldset>
                 <legend>Perfil</legend>
-
                 <p>Gênero:</p>
-                <input type="radio" name="userGender" value="Feminino">
-                <label for="userGender">Feminino</label>
+                <input id="gender" type="radio" name="userGender" value="Feminino">
+                <label for="gender">Feminino</label>
 
-                <input type="radio" name="userGender" value="Masculino">
-                <label for="userGender">Masculino</label>
+                <input id="gender" type="radio" name="userGender" value="Masculino">
+                <label for="gender">Masculino</label>
 
-                <input type="radio" name="userGender" value="notInformed">
-                <label for="userGender">Prefiro não informar</label>
+                <input id="gender" type="radio" name="userGender" value="notInformed">
+                <label for="gender">Prefiro não informar</label>
             </fieldset>
             <br>
 
-            <label for="maritalStatus">Estado civil:</label>
-            <select name="maritalStatus">
+            <label for="status">Estado civil:</label>
+            <select id="status" name="maritalStatus">
                 <option value="notInformed">Selecione...</option>
                 <option value="casado">Casado(a)</option>
                 <option value="solteiro">Solteiro(a)</option>
@@ -62,7 +66,7 @@
             </select>
 
             <label for="states">Estados:</label>
-            <select name="states" required>
+            <select id="states" name="userStates" required>
                    <option value="acre">Acre</option>
                    <option value="amapa">Amapá</option>
                    <option value="amazonas">Amazonas</option>
@@ -92,8 +96,39 @@
                    <option value="santaCatarina">Santa Catarina</option>
             </select>
 
-            <label for="userCity">Cidade:</label>
-            <input type="text" name="userCity" id="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
+            <label for="city">Cidade:</label>
+            <input id="city" type="text" name="userCity" id="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
+            
+
+            <fieldset>
+                <legend>Hábitos</legend>
+                <p>Redes Sociais</p>
+                <input id="instagram" type="checkbox" name="social" value="instagram">
+                <label for="social">Instagram</label>
+                <br>
+                <input id="facebook" type="checkbox" name="social" value="facebook">
+                <label for="social">Facebook</label>
+                <br>
+                <input id="linkedin" type="checkbox" name="social" value="linkedin">
+                <label for="social">Linkedin</label>
+                <br>
+                <input id="x" type="checkbox" name="social" value="x">
+                <label for="social">X</label>
+                <br>
+
+                <label for="musicStyle">Estilo musical:</label>
+                <input list="sytleTypes" id="musicStyle" name="userMusicSytle" type="text">
+                <datalist id="sytleTypes">
+                    <option value="Rock">
+                    <option value="Pop">
+                    <option value="Samba">
+                    <option value="MPB">
+                    <option value="Rap">
+                    <option value="Sertanejo">
+                    <option value="Funk">
+                </datalist>
+            </fieldset>
+
             <button type="submit">Enviar</button>
         </form>
     </section>
